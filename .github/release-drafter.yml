@@ -1,42 +1,39 @@
+# SPDX-FileCopyrightText: 2020-2024 LibreCode coop and contributors
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
 categories:
   - title: 'Features'
-    labels:
-      - 'feat'
-
+    labels: ['feat']
   - title: 'Changes'
-    labels:
-      - 'chore'
-      - 'refactor'
-      - 'docs'
-      - 'style'
-      - 'test'
-      - 'perf'
-      - 'build'
-      - 'ci'
-      - 'deps'
-      - 'translation'
-      - 'update'
-
+    labels: ['chore', 'refactor', 'docs', 'style', 'test', 'perf', 'build', 'ci', 'deps', 'translation', 'update']
   - title: 'Fixes'
-    labels:
-      - 'fix'
-      - 'bug'
+    labels: ['fix', 'bug']
 
 change-template: '- $TITLE [#$NUMBER]($URL)'
 
 version-resolver:
   major:
-    labels: [major]
+    labels: ['major']
   minor:
-    labels: [minor]
+    labels: ['minor']
   patch:
-    labels: [patch]
+    labels: ['patch']
   default: patch
 
 template: |
   ## What’s Changed
 
-  $CHANGES
+  ## Features
+  $CATEGORY_FEATURES
+
+  ## Changes
+  $CATEGORY_CHANGES
+
+  ## Fixes
+  $CATEGORY_FIXES
 
   Milestone: $RESOLVED_VERSION
   **Full Changelog**: https://github.com/LibreSign/libresign/compare/$PREVIOUS_TAG...$NEXT_TAG
