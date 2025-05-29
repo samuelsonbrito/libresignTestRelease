@@ -35,3 +35,11 @@ version-resolver:
   patch:
     labels: [patch]
   default: patch
+
+template: |
+  ## What’s Changed
+
+  $CHANGES
+
+  Milestone: $RESOLVED_VERSION
+  **Full Changelog**: https://github.com/LibreSign/libresign/compare/$PREVIOUS_TAG...$NEXT_TAG
