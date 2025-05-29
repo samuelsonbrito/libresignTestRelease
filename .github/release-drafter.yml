@@ -5,26 +5,28 @@ name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 
 categories:
-  - title: '🚀 Features'
+  - title: 'Features'
     labels:
-      - 'feature'
       - 'feat'
-  - title: '🐛 Bug Fixes'
-    labels:
-      - 'fix'
-      - 'bugfix'
-      - 'bug'
-  - title: '🛠️ Changes'
+
+  - title: 'Changes'
     labels:
       - 'chore'
       - 'refactor'
       - 'docs'
-  - title: '📦 Dependencies'
-    labels:
-      - 'dependencies'
-  - title: '🧪 Tests'
-    labels:
+      - 'style'
       - 'test'
+      - 'perf'
+      - 'build'
+      - 'ci'
+      - 'deps'
+      - 'translation'
+      - 'update'
+
+  - title: 'Fixes'
+    labels:
+      - 'fix'
+      - 'bug'
 
 change-template: '- $TITLE [#$NUMBER]($URL)'
 
@@ -43,6 +45,16 @@ version-resolver:
 template: |
   ## What’s Changed
 
-  $CHANGES
+  ## Features
+
+  $CATEGORY_FEATURES
+
+  ## Changes
+
+  $CATEGORY_CHANGES
+
+  ## Fixes
+
+  $CATEGORY_FIXES
 
   **Full Changelog**: https://github.com/LibreSign/libresign/compare/$PREVIOUS_TAG...$NEXT_TAG
