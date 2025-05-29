@@ -113,7 +113,7 @@ class AdminController extends AEnvironmentAwareController {
 		string $configPath = '',
 	): DataResponse {
 		if(1==1){
-			echo 'teste 24';
+			echo 'teste 244';
 		}
 		try {
 			$engineHandler = $this->generateCertificate($rootCert, [
